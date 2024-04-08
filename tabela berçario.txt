@@ -1,0 +1,28 @@
+create table medicos (
+id int not null auto_increment,
+crm int not null,
+nome varchar(30) not null,
+telefone int not null,
+especilidade varchar(20),
+primary key(id)
+) default charset=utf8mb4;
+ 
+create table bebes (
+id int not null auto_increment,
+nascimento date,
+peso decimal (5,2),
+altura decimal (3,2),
+mae varchar(30),
+medico varchar (30),
+primary key(id)
+) default charset = utf8mb4;
+
+insert into medicos
+(id , crm, nome, telefone, especialidade)
+
+select * from medicos;
+
+insert into bebes
+(id , nascimento, peso, altura, mae, medico)
+
+select * from bebes;
